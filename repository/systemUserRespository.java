@@ -3,7 +3,7 @@ package repository;
 import entity.sysUser;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
-
+import org.springframework.data.jpa.repository.Query;
 
 
 /**
@@ -11,6 +11,7 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
  */
 
 public interface systemUserRespository extends JpaRepository<sysUser,Integer> ,JpaSpecificationExecutor<sysUser> {
+
 
 
 }
