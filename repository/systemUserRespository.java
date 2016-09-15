@@ -11,7 +11,9 @@ import org.springframework.data.jpa.repository.Query;
  */
 
 public interface systemUserRespository extends JpaRepository<sysUser,Integer> ,JpaSpecificationExecutor<sysUser> {
+    @Query(value = "SELECT u.id from sysUser u WHERE u.id =?1",nativeQuery = true)
+    java.util.List<sysUser> findById(Integer id);
 
-
-
+    @Query("SELECT u.account from sysUser u WHERE u.account =?1")
+    java.util.List<sysUser>findByAccount(String account);
 }
